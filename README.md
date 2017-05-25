@@ -56,7 +56,7 @@ DPScreenshotsPopView *popView=[DPScreenshotsPopView initWithScreenShots:screensh
 #usage</br>
 #把DPScreenshots文件导入项目中然后监听截屏事件，然后添加视图即可！</br>
 
-
+![image](https://github.com/dongpeng66/DPScreenshots/blob/master/ziji.gif)
 
 
 
