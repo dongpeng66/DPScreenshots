@@ -87,13 +87,16 @@ static const float RealSrceenWidth =  375.0;
         self.bottomView.alpha=0.0;
         self.shotsImageView.alpha=0.0;
         
-       
+        
     }];
     dispatch_time_t delayTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5/*延迟执行时间*/ * NSEC_PER_SEC));
     
     dispatch_after(delayTime, dispatch_get_main_queue(), ^{
         [self.maskView removeFromSuperview];
         [self removeFromSuperview];
+        if (_hiddenBlock) {
+            _hiddenBlock();
+        }
         
     });
     
@@ -196,11 +199,11 @@ static const float RealSrceenWidth =  375.0;
     [view.layer addAnimation:animation forKey:nil];
 }
 /*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
+ // Only override drawRect: if you perform custom drawing.
+ // An empty implementation adversely affects performance during animation.
+ - (void)drawRect:(CGRect)rect {
+ // Drawing code
+ }
+ */
 
 @end

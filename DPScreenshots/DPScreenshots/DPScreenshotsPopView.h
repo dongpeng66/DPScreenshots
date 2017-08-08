@@ -13,7 +13,9 @@ typedef NS_ENUM(NSInteger, SelectSheetType) {
     WeiXinCircleSelectSheetType
 };
 typedef void (^ActionSheetDidSelectSheetBlock)(SelectSheetType type);
+typedef void (^ActionSheetDidHiddenBlock)(void);
 @interface DPScreenshotsPopView : UIView
+@property (nonatomic, copy) ActionSheetDidHiddenBlock hiddenBlock;
 +(instancetype)initWithScreenShots:(UIImage *)shotsImage selectSheetBlock:(ActionSheetDidSelectSheetBlock)selectSheetBlock;
 -(void)show;
 @end

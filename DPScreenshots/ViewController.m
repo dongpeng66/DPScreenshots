@@ -10,7 +10,7 @@
 #import "ShotBlocker.h"
 #import "DPScreenshotsPopView.h"
 @interface ViewController ()
-
+@property (nonatomic,assign) BOOL isHidden;
 @end
 
 @implementation ViewController
@@ -24,20 +24,22 @@
     image.contentMode=UIViewContentModeScaleAspectFit;
     [self.view addSubview:image];
     
+    _isHidden=YES;
+    
     
     //================第一种通过注册通知的方法
     
     //注册通知  iOS7提供一个崭新的推送方法：UIApplicationUserDidTakeScreenshotNotification。只要像往常一样订阅即可知道什么时候截图了。
-//    注意：UIApplicationUserDidTakeScreenshotNotification 将会在截图完成之后显示。现在在截图截取之前无法得到通知。
-//    希望苹果会在iOS8当中增加 UIApplicationUserWillTakeScreenshotNotification。（只有did, 没有will显然不是苹果的风格...）
-//    [[NSNotificationCenter defaultCenter] addObserver:self
-//                                             selector:@selector(userDidTakeScreenshot:)
-//                                                 name:UIApplicationUserDidTakeScreenshotNotification object:nil];
+    //    注意：UIApplicationUserDidTakeScreenshotNotification 将会在截图完成之后显示。现在在截图截取之前无法得到通知。
+    //    希望苹果会在iOS8当中增加 UIApplicationUserWillTakeScreenshotNotification。（只有did, 没有will显然不是苹果的风格...）
+    //    [[NSNotificationCenter defaultCenter] addObserver:self
+    //                                             selector:@selector(userDidTakeScreenshot:)
+    //                                                 name:UIApplicationUserDidTakeScreenshotNotification object:nil];
     
     
     
     ////======第二种是通过开源库ShotBlocker，需要获取用户的相册的权限
-
+    
     
     [self shotBlock];
 }
@@ -47,18 +49,28 @@
     [[ShotBlocker sharedManager] detectScreenshotWithImageBlock:^(UIImage *screenshot) {
         NSLog(@"Screenshot! %@", screenshot);
         UIWindow *keyWindow=[[UIApplication sharedApplication]keyWindow];
-        DPScreenshotsPopView *popView=[DPScreenshotsPopView initWithScreenShots:screenshot selectSheetBlock:^(SelectSheetType type) {
-            if (type==QQSelectSheetType) {
-                NSLog(@"点击的是QQ分享");
-            }else if (type==WeiXinSelectSheetType){
-                NSLog(@"点击的是微信好友分享");
-            }else if (type==WeiXinCircleSelectSheetType){
-                NSLog(@"点击的是微信朋友圈分享");
-            }
-        }];
-        [popView show];
         
-        [keyWindow addSubview:popView];
+        if (_isHidden) {
+            DPScreenshotsPopView *popView=[DPScreenshotsPopView initWithScreenShots:screenshot selectSheetBlock:^(SelectSheetType type) {
+                if (type==QQSelectSheetType) {
+                    NSLog(@"点击的是QQ分享");
+                }else if (type==WeiXinSelectSheetType){
+                    NSLog(@"点击的是微信好友分享");
+                }else if (type==WeiXinCircleSelectSheetType){
+                    NSLog(@"点击的是微信朋友圈分享");
+                }
+            }];
+            [popView show];
+            
+            [keyWindow addSubview:popView];
+            _isHidden=NO;
+            popView.hiddenBlock = ^{
+                _isHidden=YES;
+            };
+        }else{
+            
+        }
+        
     }];
 }
 
@@ -70,18 +82,26 @@
     //人为截屏, 模拟用户截屏行为, 获取所截图片
     UIImage *image_ = [self imageWithScreenshot];
     UIWindow *keyWindow=[[UIApplication sharedApplication]keyWindow];
-    DPScreenshotsPopView *popView=[DPScreenshotsPopView initWithScreenShots:image_ selectSheetBlock:^(SelectSheetType type) {
-        if (type==QQSelectSheetType) {
-            NSLog(@"点击的是QQ分享");
-        }else if (type==WeiXinSelectSheetType){
-            NSLog(@"点击的是微信好友分享");
-        }else if (type==WeiXinCircleSelectSheetType){
-            NSLog(@"点击的是微信朋友圈分享");
-        }
-    }];
-    [popView show];
-    
-    [keyWindow addSubview:popView];
+    if (_isHidden) {
+        DPScreenshotsPopView *popView=[DPScreenshotsPopView initWithScreenShots:image_ selectSheetBlock:^(SelectSheetType type) {
+            if (type==QQSelectSheetType) {
+                NSLog(@"点击的是QQ分享");
+            }else if (type==WeiXinSelectSheetType){
+                NSLog(@"点击的是微信好友分享");
+            }else if (type==WeiXinCircleSelectSheetType){
+                NSLog(@"点击的是微信朋友圈分享");
+            }
+        }];
+        [popView show];
+        
+        [keyWindow addSubview:popView];
+        _isHidden=NO;
+        popView.hiddenBlock = ^{
+            _isHidden=YES;
+        };
+    }else{
+        
+    }
 }
 /**
  *  截取当前屏幕
