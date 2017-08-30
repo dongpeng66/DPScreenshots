@@ -61,14 +61,14 @@ DPScreenshotsPopView *popView=[DPScreenshotsPopView initWithScreenShots:screensh
 如诺要实现每一个界面都要实现截屏分享的功能,可以把这个放到自己的baseController中,第一种:注册通知  可按照deom的方法实现,没有问题.第二种:通过开源库ShotBlocker实现.需要特殊处理一下,需要这样子实现
 
 
--(void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    [self shotBlock];
-}
--(void)viewWillDisappear:(BOOL)animated{
-    [super viewWillDisappear:animated];
-    [[ShotBlocker sharedManager]stopDetectingScreenshots];
-}
+-(void)viewWillAppear:(BOOL)animated{</br>
+    [super viewWillAppear:animated];</br>
+    [self shotBlock];</br>
+}</br>
+-(void)viewWillDisappear:(BOOL)animated{</br>
+    [super viewWillDisappear:animated];</br>
+    [[ShotBlocker sharedManager]stopDetectingScreenshots];</br>
+}</br>
 
 
 
