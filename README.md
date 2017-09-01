@@ -58,20 +58,14 @@ DPScreenshotsPopView *popView=[DPScreenshotsPopView initWithScreenShots:screensh
 
 ![image](https://github.com/dongpeng66/DPScreenshots/blob/master/ziji.gif)
 </br>
-如诺要实现每一个界面都要实现截屏分享的功能,可以把这个放到自己的baseController中,第一种:注册通知  可按照deom的方法实现,没有问题.第二种:通过开源库ShotBlocker实现.需要特殊处理一下,需要这样子实现
-
-
--(void)viewWillAppear:(BOOL)animated{</br>
-    [super viewWillAppear:animated];</br>
-    [self shotBlock];</br>
-}</br>
--(void)viewWillDisappear:(BOOL)animated{</br>
-    [super viewWillDisappear:animated];</br>
-    [[ShotBlocker sharedManager]stopDetectingScreenshots];</br>
-}</br>
-
-
-
+如诺要实现每一个界面都要实现截屏分享的功能,可以把这个放到自己的baseController中.</br>
+第一种:在AppDelegate中打开</br>
+//注册通知的方式</br>
+//    UINavigationController *nav=[[UINavigationController alloc]initWithRootViewController:[OneViewController new]];</br>
+第二种:在AppDelegate中打开</br>
+//开源库的方式</br>
+UINavigationController *nav=[[UINavigationController alloc]initWithRootViewController:[OneViewControllerOne new]];</br>
+看各自继承的BaseViewController和BaseViewControllerOne里面的实现
 
 
 
