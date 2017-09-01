@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3652E6091F58334C00632554 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652E6081F58334C00632554 /* BaseViewController.m */; };
+		3652E60C1F58355500632554 /* BaseViewControllerOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652E60B1F58355500632554 /* BaseViewControllerOne.m */; };
+		3652E60F1F5835CF00632554 /* OneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652E60E1F5835CF00632554 /* OneViewController.m */; };
+		3652E6121F5835DE00632554 /* TwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652E6111F5835DE00632554 /* TwoViewController.m */; };
+		3652E6151F5835F200632554 /* OneViewControllerOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652E6141F5835F200632554 /* OneViewControllerOne.m */; };
+		3652E6181F58360000632554 /* TwoViewControllerTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652E6171F58360000632554 /* TwoViewControllerTwo.m */; };
 		E2C2F76D1ED5821200CF715C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C2F76C1ED5821200CF715C /* main.m */; };
 		E2C2F7701ED5821200CF715C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C2F76F1ED5821200CF715C /* AppDelegate.m */; };
 		E2C2F7761ED5821200CF715C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2C2F7741ED5821200CF715C /* Main.storyboard */; };
@@ -39,6 +45,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3652E6071F58334C00632554 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		3652E6081F58334C00632554 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		3652E60A1F58355500632554 /* BaseViewControllerOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewControllerOne.h; sourceTree = "<group>"; };
+		3652E60B1F58355500632554 /* BaseViewControllerOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewControllerOne.m; sourceTree = "<group>"; };
+		3652E60D1F5835CF00632554 /* OneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneViewController.h; sourceTree = "<group>"; };
+		3652E60E1F5835CF00632554 /* OneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneViewController.m; sourceTree = "<group>"; };
+		3652E6101F5835DE00632554 /* TwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoViewController.h; sourceTree = "<group>"; };
+		3652E6111F5835DE00632554 /* TwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoViewController.m; sourceTree = "<group>"; };
+		3652E6131F5835F200632554 /* OneViewControllerOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneViewControllerOne.h; sourceTree = "<group>"; };
+		3652E6141F5835F200632554 /* OneViewControllerOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneViewControllerOne.m; sourceTree = "<group>"; };
+		3652E6161F58360000632554 /* TwoViewControllerTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoViewControllerTwo.h; sourceTree = "<group>"; };
+		3652E6171F58360000632554 /* TwoViewControllerTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoViewControllerTwo.m; sourceTree = "<group>"; };
 		E2C2F7681ED5821200CF715C /* DPScreenshots.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DPScreenshots.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2C2F76C1ED5821200CF715C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E2C2F76E1ED5821200CF715C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -117,6 +135,18 @@
 				E2C2F76F1ED5821200CF715C /* AppDelegate.m */,
 				E2EC5C9E1ED67CE9000A08E5 /* ViewController.h */,
 				E2EC5C9F1ED67CE9000A08E5 /* ViewController.m */,
+				3652E6071F58334C00632554 /* BaseViewController.h */,
+				3652E6081F58334C00632554 /* BaseViewController.m */,
+				3652E60D1F5835CF00632554 /* OneViewController.h */,
+				3652E60E1F5835CF00632554 /* OneViewController.m */,
+				3652E6101F5835DE00632554 /* TwoViewController.h */,
+				3652E6111F5835DE00632554 /* TwoViewController.m */,
+				3652E60A1F58355500632554 /* BaseViewControllerOne.h */,
+				3652E60B1F58355500632554 /* BaseViewControllerOne.m */,
+				3652E6131F5835F200632554 /* OneViewControllerOne.h */,
+				3652E6141F5835F200632554 /* OneViewControllerOne.m */,
+				3652E6161F58360000632554 /* TwoViewControllerTwo.h */,
+				3652E6171F58360000632554 /* TwoViewControllerTwo.m */,
 				E2C2F7741ED5821200CF715C /* Main.storyboard */,
 				E2C2F77A1ED5821200CF715C /* Assets.xcassets */,
 				E2C2F77C1ED5821200CF715C /* LaunchScreen.storyboard */,
@@ -316,10 +346,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3652E6181F58360000632554 /* TwoViewControllerTwo.m in Sources */,
+				3652E6121F5835DE00632554 /* TwoViewController.m in Sources */,
+				3652E60C1F58355500632554 /* BaseViewControllerOne.m in Sources */,
+				3652E60F1F5835CF00632554 /* OneViewController.m in Sources */,
 				E2EC5CA01ED67CE9000A08E5 /* ViewController.m in Sources */,
+				3652E6091F58334C00632554 /* BaseViewController.m in Sources */,
 				E2EC5C9D1ED67CBE000A08E5 /* YLButton.m in Sources */,
 				E2EC5C9A1ED67CBE000A08E5 /* DPScreenshotsPopView.m in Sources */,
 				E2C2F7701ED5821200CF715C /* AppDelegate.m in Sources */,
+				3652E6151F5835F200632554 /* OneViewControllerOne.m in Sources */,
 				E2EC5C9B1ED67CBE000A08E5 /* ShotBlocker.m in Sources */,
 				E2C2F76D1ED5821200CF715C /* main.m in Sources */,
 				E2C2F7791ED5821200CF715C /* DPScreenshots.xcdatamodeld in Sources */,
@@ -473,7 +509,7 @@
 				INFOPLIST_FILE = DPScreenshots/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = dp.DPAdjustBrightness;
+				PRODUCT_BUNDLE_IDENTIFIER = DP.RZTakeImageBloc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -486,7 +522,7 @@
 				INFOPLIST_FILE = DPScreenshots/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = dp.DPAdjustBrightness;
+				PRODUCT_BUNDLE_IDENTIFIER = DP.RZTakeImageBloc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
